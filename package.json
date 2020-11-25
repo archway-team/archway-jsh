@@ -1,0 +1,34 @@
+{
+  "name": "@archway/jsh",
+  "version": "0.0.1",
+  "description": "Extend Archway with hyperscript",
+  "main": "index.js",
+  "module": "./dist/esm/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx rollup -c",
+    "dev": "npx rollup -c --watch --environment mode:dev"
+  },
+  "keywords": [
+    "Archway",
+    "jsh"
+  ],
+  "author": "Nathan Pham <nathanpham.me@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "archway-framework": "^1.0.7",
+    "rollup": "^2.33.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
